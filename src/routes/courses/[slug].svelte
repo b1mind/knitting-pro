@@ -1,5 +1,5 @@
 <!-- <script context="module">
-  //can use this for standard endpoint but using page endpoints no need
+  //example of using standard endpoint
   export async function load({ params, fetch, session, stuff }) {
     const url = `/api/${params.slug}.json`
     const response = await fetch(url)
@@ -20,6 +20,7 @@
   import { page } from '$app/stores'
 
   export let coursesData
+
   $: slugTitle = $page.params.slug
 </script>
 
