@@ -2,7 +2,8 @@
   import Card from '$lib/Card.svelte'
   import Cta from '$lib/Cta.svelte'
   import Footer from '$lib/Footer.svelte'
-  import { courses } from '$lib/data/posts.js'
+
+  export let courses
 </script>
 
 <section class="container">

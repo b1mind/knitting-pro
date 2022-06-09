@@ -1,4 +1,5 @@
-<script context="module">
+<!-- <script context="module">
+  //can use this for standard endpoint but using page endpoints no need
   export async function load({ params, fetch, session, stuff }) {
     const url = `/api/${params.slug}.json`
     const response = await fetch(url)
@@ -12,13 +13,14 @@
       },
     }
   }
-</script>
-
+</script> -->
 <script>
   import Card from '$lib/Card.svelte'
   import Footer from '$lib/Footer.svelte'
-  export let slugTitle
+  import { page } from '$app/stores'
+
   export let coursesData
+  $: slugTitle = $page.params.slug
 </script>
 
 <section class="container">
