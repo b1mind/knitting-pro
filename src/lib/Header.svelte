@@ -1,7 +1,10 @@
 <script>
-  import Nav from '$lib/Nav.svelte'
   import { page } from '$app/stores'
   import { onMount } from 'svelte'
+
+  import { cartStore } from '$lib/data/store'
+
+  import Nav from '$lib/Nav.svelte'
 
   $: isHome = $page.url.pathname === '/'
   $: isCourse = !isHome
@@ -63,12 +66,30 @@
       <!-- todo if signed in view courses -->
       <a class="pill" href="/start">Get Started</a>
 
-      <a href="/cart">
-        <svg height="35" width="35" viewBox="0 0 30 30">
-          <circle r="15" cx="15" cy="15" />
-          <circle r="10" cx="20" cy="10" fill="blueviolet" />
-        </svg>
-      </a>
+      {#if !isHome}
+        <a class="cart" href="/cart">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            role="img"
+            width="32"
+            height="32"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M7 22q-.825 0-1.412-.587Q5 20.825 5 20q0-.825.588-1.413Q6.175 18 7 18t1.412.587Q9 19.175 9 20q0 .825-.588 1.413Q7.825 22 7 22Zm10 0q-.825 0-1.412-.587Q15 20.825 15 20q0-.825.588-1.413Q16.175 18 17 18t1.413.587Q19 19.175 19 20q0 .825-.587 1.413Q17.825 22 17 22ZM7 17q-1.125 0-1.7-.988q-.575-.987-.05-1.962L6.6 11.6L3 4H1.975q-.425 0-.7-.288Q1 3.425 1 3t.288-.713Q1.575 2 2 2h1.625q.275 0 .525.15t.375.425L5.2 4h14.75q.675 0 .925.5t-.025 1.05l-3.55 6.4q-.275.5-.725.775q-.45.275-1.025.275H8.1L7 15h11.025q.425 0 .7.287q.275.288.275.713t-.288.712Q18.425 17 18 17Z"
+            />
+          </svg>
+
+          {#if $cartStore.items > 0}
+            <div class="total">
+              {$cartStore.items}
+            </div>
+          {/if}
+        </a>
+      {/if}
     </nav>
   </div>
 
@@ -90,6 +111,29 @@
     grid-auto-flow: column;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  .cart {
+    display: grid;
+
+    & > * {
+      grid-area: 1 / 1 / -1 / -1;
+    }
+
+    .total {
+      justify-self: end;
+      width: 24px;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 0.65rem;
+      font-variant-numeric: tabular-nums;
+      background-color: var(--clr-primary-400);
+      border-radius: 75%;
+      border: 2px solid white;
+      transform: translate(8px, -10px);
+    }
   }
 
   .nav-top {
