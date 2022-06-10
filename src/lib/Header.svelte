@@ -7,7 +7,7 @@
   import Nav from '$lib/Nav.svelte'
 
   $: isHome = $page.url.pathname === '/'
-  $: isCourse = !isHome
+  $: isCourse = $page.url.pathname.includes('course')
 
   let mediaSml = true
 
@@ -66,7 +66,7 @@
       <!-- todo if signed in view courses -->
       <a class="pill" href="/start">Get Started</a>
 
-      {#if !isHome}
+      {#if isCourse}
         <a class="cart" href="/cart">
           <svg
             xmlns="http://www.w3.org/2000/svg"
