@@ -1,6 +1,12 @@
 Todo:
-  ☐ add shopping cart icon + logic
-  ☐ getting started + sign up (if logged in show paid courses)
-  ☐ search bar working. opt: debounce w/suggestions (and maybe prefetch?)
+  ✔ add shopping cart icon + store @done
+  ☐ shopping cart logic 
+  ☐ getting started + sign up (if logged in filter paid courses)
   ☐ sign in and auth
   ☐ light and dark mode / preferences and button
+  ☐ button for enrolled courses goes to course
+  ☐ full screen grid wrapper
+
+WishList:
+  ☐ more fun __error defaults
+  ☐ search bar working. 
