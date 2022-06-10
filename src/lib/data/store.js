@@ -1,8 +1,19 @@
 import { writable } from 'svelte/store'
 
-let cart = {
-  items: 69,
-  courses: [],
-}
+let courses = [
+  {
+    title: 'test',
+    price: '24.99',
+  },
+  {
+    title: 'another course',
+    price: '3.99',
+  },
+  {
+    title: 'random name course',
+    price: '2.99',
+  },
+]
 
-export const cartStore = writable(cart)
+// export const cartStore = writable(courses)
+export const cartStore = writable([])

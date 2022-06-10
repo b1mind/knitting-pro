@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte'
   import Rating from '$lib/Rating.svelte'
+  import { cartStore } from '$lib/data/store'
 
   export let title
   export let author
@@ -22,6 +23,11 @@
   let mediaSml = true
   function mediaQueryHandler(e) {
     mediaSml = e.matches
+  }
+
+  function handleEnrollClick(title, price, sale) {
+    let newCourse = { title, price, sale }
+    $cartStore = [newCourse, ...$cartStore]
   }
 
   onMount(() => {
@@ -61,7 +67,9 @@
       {/if}
     </div>
 
-    <button class="pill lrg">Enroll</button>
+    <button class="pill lrg" on:click={handleEnrollClick(title, price, sale)}
+      >Enroll</button
+    >
   </footer>
 </article>
 

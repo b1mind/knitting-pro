@@ -83,9 +83,9 @@
             />
           </svg>
 
-          {#if $cartStore.items > 0}
+          {#if $cartStore.length > 0}
             <div class="total">
-              {$cartStore.items}
+              {$cartStore.length}
             </div>
           {/if}
         </a>
