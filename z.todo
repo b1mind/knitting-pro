@@ -1,11 +1,15 @@
 Todo:
   ✔ add shopping cart icon + store @done
   ☐ shopping cart logic 
+  ☐ sticky header or at least sticky cart
   ☐ getting started + sign up (if logged in filter paid courses)
   ☐ sign in and auth
   ☐ light and dark mode / preferences and button
   ☐ button for enrolled courses goes to course
   ☐ full screen grid wrapper
+  ☐ persentent local store for cart
+  ☐ demo user with auth / give cred at login 
+  ☐ when logged out clears cart or saves local storage (as demo user per client)
 
 WishList:
   ☐ more fun __error defaults
