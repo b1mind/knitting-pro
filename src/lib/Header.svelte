@@ -123,6 +123,7 @@
     .total {
       justify-self: end;
       width: 24px;
+      padding-top: 0.2em;
       aspect-ratio: 1;
       display: grid;
       place-items: center;
