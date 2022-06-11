@@ -1,13 +1,14 @@
 Todo:
   ✔ add shopping cart icon + store @done
-  ☐ shopping cart logic 
+  ✔ shopping cart logic @done
+  ✔ card button dynamic for add/remove to cart @done
+  ✔ persentent local store for cart @done
   ☐ sticky header or at least sticky cart
+  ☐ light and dark mode / preferences and button
+  ☐ full screen grid wrapper
+  ☐ button for enrolled courses goes to course
   ☐ getting started + sign up (if logged in filter paid courses)
   ☐ sign in and auth
-  ☐ light and dark mode / preferences and button
-  ☐ button for enrolled courses goes to course
-  ☐ full screen grid wrapper
-  ☐ persentent local store for cart
   ☐ demo user with auth / give cred at login 
   ☐ when logged out clears cart or saves local storage (as demo user per client)
 
