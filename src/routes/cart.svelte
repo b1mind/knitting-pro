@@ -1,5 +1,6 @@
 <script>
   import Card from '$lib/Card.svelte'
+  import Footer from '$lib/Footer.svelte'
   import { cartStore } from '$lib/data/store'
 </script>
 
@@ -11,6 +12,7 @@
 {#each $cartStore as { ...course }}
   <Card {...course} />
 {/each}
+<Footer />
 
 <style lang="scss">
 </style>

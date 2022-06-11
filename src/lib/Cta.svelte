@@ -14,8 +14,8 @@
     </div>
     <div class="img">
       <picture>
-        <source srcset="img/{img}.webp" type="image/webp" />
-        <source srcset="img/{img}.png" type="image/png" />
+        <source srcset="/img/{img}.webp" type="image/webp" />
+        <source srcset="/img/{img}.png" type="image/png" />
         <img src="/img/{img}.png" alt={img} width="325px" height="325px" />
       </picture>
     </div>

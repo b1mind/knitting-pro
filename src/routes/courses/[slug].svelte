@@ -16,6 +16,7 @@
 </script> -->
 <script>
   import Card from '$lib/Card.svelte'
+  import Cta from '$lib/Cta.svelte'
   import Footer from '$lib/Footer.svelte'
   import { page } from '$app/stores'
 
@@ -33,7 +34,10 @@
   </div>
 
   {#if coursesData.length === 0}
-    <p>There are no {slugTitle} courses open right now.</p>
+    <Cta img="yarn" alt="true">
+      <p>There are no {slugTitle} courses open right now.</p>
+      <div class="title-lrg">Become an instructor</div>
+    </Cta>
   {/if}
 </section>
 
