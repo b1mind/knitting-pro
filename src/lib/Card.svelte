@@ -3,13 +3,13 @@
   import Rating from '$lib/Rating.svelte'
   import { cartStore } from '$lib/data/store'
 
-  export let title
-  export let author
-  export let summary
-  export let level
-  export let rating
-  export let sale
-  export let price
+  export let title = ''
+  export let author = ''
+  export let summary = ''
+  export let level = ''
+  export let rating = ''
+  export let sale = ''
+  export let price = ''
 
   let stars = ~~rating
   let half = isInt(rating)

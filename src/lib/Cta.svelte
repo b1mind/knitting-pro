@@ -1,5 +1,5 @@
 <script>
-  export let alt
+  export let alt = ''
   export let img = 'profile-pic'
 </script>
 
