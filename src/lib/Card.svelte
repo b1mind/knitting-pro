@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from 'svelte'
+  import { afterUpdate, onMount } from 'svelte'
   import Rating from '$lib/Rating.svelte'
   import { cartStore } from '$lib/data/store'
 
@@ -30,21 +30,21 @@
     let newCourse = { title, author, summary, level, rating, price, sale }
 
     $cartStore = [newCourse, ...$cartStore]
-    inCart = true
   }
 
   function handleRemoveClick(e) {
     let newCourse = { title, author, summary, level, rating, price, sale }
 
     $cartStore = $cartStore.filter((course) => course.title !== newCourse.title)
-    inCart = false
   }
 
   onMount(() => {
     const mediaListener = window.matchMedia('(max-width: 38.75em)')
     mediaSml = mediaListener.matches
     mediaListener.addEventListener('change', mediaQueryHandler)
+  })
 
+  afterUpdate(() => {
     inCart = $cartStore.some((course) => course.title === title)
   })
 </script>
