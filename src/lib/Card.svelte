@@ -14,6 +14,7 @@
   let stars = ~~rating
   let half = isInt(rating)
   let deal = ((price - sale) / sale) * 100 >= 80
+  let inCart = false
 
   function isInt(n) {
     return n % 1 === 0
@@ -25,15 +26,26 @@
     mediaSml = e.matches
   }
 
-  function handleEnrollClick(title, price, sale) {
-    let newCourse = { title, price, sale }
+  function handleEnrollClick(e) {
+    let newCourse = { title, author, summary, level, rating, price, sale }
+
     $cartStore = [newCourse, ...$cartStore]
+    inCart = true
+  }
+
+  function handleRemoveClick(e) {
+    let newCourse = { title, author, summary, level, rating, price, sale }
+
+    $cartStore = $cartStore.filter((course) => course.title !== newCourse.title)
+    inCart = false
   }
 
   onMount(() => {
     const mediaListener = window.matchMedia('(max-width: 38.75em)')
     mediaSml = mediaListener.matches
     mediaListener.addEventListener('change', mediaQueryHandler)
+
+    inCart = $cartStore.some((course) => course.title === title)
   })
 </script>
 
@@ -67,9 +79,15 @@
       {/if}
     </div>
 
-    <button class="pill lrg" on:click={handleEnrollClick(title, price, sale)}
-      >Enroll</button
-    >
+    {#if inCart}
+      <button
+        class="pill lrg"
+        style="--clr-bg: maroon;"
+        on:click={handleRemoveClick}>Remove</button
+      >
+    {:else}
+      <button class="pill lrg" on:click={handleEnrollClick}>Enroll</button>
+    {/if}
   </footer>
 </article>
 
