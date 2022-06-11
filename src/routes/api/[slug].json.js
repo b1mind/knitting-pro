@@ -1,3 +1,4 @@
+//this is a demo file to show how to pass json.js endpoint
 export async function get({ params }) {
   let slugTitle = params.slug
   let courses = [
@@ -60,71 +61,6 @@ export async function get({ params }) {
       level: 'intermediate',
       rating: 4.4,
       sale: '5.99',
-      price: '23.99',
-    },
-
-    //todo update repeats with different data
-    {
-      title: 'This is a long course title ya baby!',
-      author: 'Kevin Howell',
-      summary:
-        'This will be a description about the course and maybe not all will have one',
-      level: 'beginner',
-      rating: 4.4,
-      sale: '15.99',
-      price: '23.99',
-    },
-
-    {
-      title: 'This is a long course title ya baby!',
-      author: 'Kevin Powell',
-      summary:
-        'This will be a description about the course and maybe not all will have one',
-      level: 'expert',
-      rating: 4.4,
-      sale: '15.99',
-      price: '23.99',
-    },
-
-    {
-      title: 'This is a long course title ya baby!',
-      author: 'Kevin Howell',
-      level: 'beginner',
-      rating: 4.4,
-      sale: '15.99',
-      price: '23.99',
-    },
-
-    {
-      title: 'This is a long course title ya baby!',
-      author: 'Kevin Powell',
-      summary:
-        'This will be a description about the course and maybe not all will have one',
-      level: 'expert',
-      rating: 4.4,
-      sale: '15.99',
-      price: '23.99',
-    },
-
-    {
-      title: 'This is a long course title ya baby!',
-      author: 'Kevin Powell',
-      summary:
-        'This will be a description about the course and maybe not all will have one',
-      level: 'beginner',
-      rating: 4.4,
-      sale: '15.99',
-      price: '23.99',
-    },
-
-    {
-      title: 'This is a long course title ya baby!',
-      author: 'Kevin Powell',
-      summary:
-        'This will be a description about the course and maybe not all will have one',
-      level: 'intermediate',
-      rating: 4.4,
-      sale: '15.99',
       price: '23.99',
     },
   ]
