@@ -1,7 +1,6 @@
 <script>
   import Card from '$lib/Card.svelte'
   import Cta from '$lib/Cta.svelte'
-  import Footer from '$lib/Footer.svelte'
 
   export let courses
 </script>
@@ -30,8 +29,6 @@
     asperiores omnis eligendi enim a delectus ipsum.
   </p>
 </Cta>
-
-<Footer />
 
 <style lang="scss">
 </style>

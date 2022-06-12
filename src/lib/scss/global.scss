@@ -192,8 +192,10 @@ button {
   min-height: 100%;
   display: grid;
   grid-template-columns: 1fr minmax(240px, $mediaLrg) 1fr;
+  grid-template-rows: auto auto 1fr auto;
   grid-template-areas:
     '. head .'
     '. courseNav .'
-    '. main .';
+    '. main .'
+    '. foot.';
 }

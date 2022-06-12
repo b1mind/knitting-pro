@@ -3,20 +3,20 @@
   const icons = [
     {
       name: 'twitter',
-      url: 'twitter.com/b1mind/'
+      url: 'twitter.com/b1mind/',
     },
     {
       name: 'twitch',
-      url: 'twitch.tv/b1mind/'
+      url: 'twitch.tv/b1mind/',
     },
     {
       name: 'github',
-      url: 'github.com/b1mind/'
+      url: 'github.com/b1mind/',
     },
     {
       name: 'codepen',
-      url: 'codepen.io/b1mind/'
-    }
+      url: 'codepen.io/b1mind/',
+    },
   ]
 </script>
 
@@ -61,6 +61,10 @@
 
 <style lang="scss">
   @use './scss/vars' as *;
+
+  footer {
+    grid-area: foot;
+  }
 
   .flex {
     gap: 1em;

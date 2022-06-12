@@ -17,7 +17,6 @@
 <script>
   import Card from '$lib/Card.svelte'
   import Cta from '$lib/Cta.svelte'
-  import Footer from '$lib/Footer.svelte'
   import { page } from '$app/stores'
 
   export let coursesData
@@ -40,8 +39,6 @@
     </Cta>
   {/if}
 </section>
-
-<Footer />
 
 <style lang="scss">
   @use '../../lib/scss/vars' as *;

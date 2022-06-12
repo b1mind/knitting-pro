@@ -10,11 +10,7 @@
 </script>
 
 <script>
-  import Footer from '$lib/Footer.svelte'
-
   export let title
 </script>
 
 <h1>{title}</h1>
-
-<Footer />
