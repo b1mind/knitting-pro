@@ -99,12 +99,22 @@
     </div>
     <h1>Become a knitting pro</h1>
   {/if}
-
-  <Nav />
 </header>
+
+<Nav />
 
 <style lang="scss">
   @use '../lib/scss/vars' as *;
+
+  header {
+    grid-area: head;
+    position: sticky;
+    top: 0;
+    min-width: 100%;
+    max-width: 75rem;
+    background-color: var(--clr-neutral-100);
+    z-index: 9999;
+  }
 
   .nav-user {
     display: grid;
@@ -117,7 +127,7 @@
     display: grid;
 
     & > * {
-      grid-area: 1 / 1 / -1 / -1;
+      grid-area: 1 / -1;
     }
 
     .total {
@@ -143,7 +153,7 @@
   }
 
   .isHome {
-    min-height: 100vh;
+    // min-height: 100vh;
     display: grid;
     align-content: center;
     @media (max-width: $mediaLrg) {
@@ -152,7 +162,7 @@
   }
 
   .isCourse {
-    box-shadow: 0 30px 50px var(--clr-neutral-200);
+    box-shadow: 0 10px 20px var(--clr-neutral-200);
   }
 
   .logo {

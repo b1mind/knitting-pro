@@ -2,31 +2,39 @@
   import { page } from '$app/stores'
 </script>
 
-<div class="scroll">
-  <nav class="flex">
-    <ul class="nav-main">
-      <li class:active={$page.url.pathname === '/courses'}>
-        <a sveltekit:prefetch href="/courses">All courses</a>
-      </li>
-      <li class:active={$page.params.slug === 'beginner'}>
-        <a sveltekit:prefetch href="/courses/beginner">Beginner</a>
-      </li>
-      <li class:active={$page.params.slug === 'intermediate'}>
-        <a sveltekit:prefetch href="/courses/intermediate">Intermediate</a>
-      </li>
-      <li class:active={$page.params.slug === 'expert'}>
-        <a sveltekit:prefetch href="/courses/expert">Expert</a>
-      </li>
-      <li class:active={$page.params.slug === 'grandmother'}>
-        <a sveltekit:prefetch href="/courses/grandmother">Grandmother</a>
-      </li>
-    </ul>
-    <a href="#void">Subscribe</a>
-  </nav>
+<div class="container">
+  <div class="scroll">
+    <nav class="flex">
+      <ul class="nav-main">
+        <li class:active={$page.url.pathname === '/courses'}>
+          <a sveltekit:prefetch href="/courses">All courses</a>
+        </li>
+        <li class:active={$page.params.slug === 'beginner'}>
+          <a sveltekit:prefetch href="/courses/beginner">Beginner</a>
+        </li>
+        <li class:active={$page.params.slug === 'intermediate'}>
+          <a sveltekit:prefetch href="/courses/intermediate">Intermediate</a>
+        </li>
+        <li class:active={$page.params.slug === 'expert'}>
+          <a sveltekit:prefetch href="/courses/expert">Expert</a>
+        </li>
+        <li class:active={$page.params.slug === 'grandmother'}>
+          <a sveltekit:prefetch href="/courses/grandmother">Grandmother</a>
+        </li>
+      </ul>
+      <a href="#void">Subscribe</a>
+    </nav>
+  </div>
 </div>
 
 <style lang="scss">
   @use './scss/vars' as *;
+
+  .container {
+    width: 100%;
+    max-width: 93vw;
+    grid-area: courseNav;
+  }
 
   .scroll {
     padding-top: 1em;
@@ -39,7 +47,7 @@
 
   nav {
     min-width: 100%;
-    padding: 0 0 1em 0;
+    padding-block-end: 1em;
     border-bottom: 4px solid var(--clr-neutral-200);
   }
 
