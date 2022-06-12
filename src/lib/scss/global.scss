@@ -1,4 +1,4 @@
-@use './lib/scss/vars' as *;
+@use './vars' as *;
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Poppins:wght@300;400;500;700&display=swap');
 
 :root {
@@ -30,6 +30,14 @@
 
   --br: 1.5em;
   --bs: 0px 40px 70px var(--clr-neutral-400), 0 15px 30px var(--clr-neutral-200);
+
+  @media (prefers-color-scheme: dark) {
+    //todo dark color tokens
+  }
+
+  @media (prefers-color-scheme: light) {
+    //todo light color tokens
+  }
 }
 
 /* resets */
@@ -40,7 +48,8 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   height: 100%;
 }
 
@@ -176,4 +185,15 @@ button {
   font-weight: var(--fw-500);
   background-color: transparent;
   border: transparent;
+}
+
+#svelte {
+  position: relative;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, $mediaLrg) 1fr;
+  grid-template-areas:
+    '. head .'
+    '. courseNav .'
+    '. main .';
 }

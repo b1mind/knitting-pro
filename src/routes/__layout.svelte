@@ -1,6 +1,6 @@
 <script>
   import Header from '$lib/Header.svelte'
-  import '../app.scss'
+  import '../lib/scss/global.scss'
 </script>
 
 <Header />
@@ -13,9 +13,8 @@
   @use '../lib/scss/vars' as *;
 
   main {
-    width: 100%;
+    grid-area: main;
     max-width: $mediaLrg;
-    margin: 0 auto;
 
     @media (max-width: $mediaSml) {
       --spacer: 2em;
