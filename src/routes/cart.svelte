@@ -4,14 +4,19 @@
   import { cartStore } from '$lib/data/store'
 </script>
 
-<p>
-  Items in cart
-  {$cartStore.length}
-</p>
+<div class="container">
+  <p>
+    Items in cart
+    {$cartStore.length}
+  </p>
 
-{#each $cartStore as { ...course }}
-  <Card {...course} />
-{/each}
+  <div class="grid">
+    {#each $cartStore as { ...course }}
+      <Card {...course} />
+    {/each}
+  </div>
+</div>
+
 <Footer />
 
 <style lang="scss">
