@@ -64,6 +64,7 @@
 
   footer {
     grid-area: foot;
+    min-width: 100%;
   }
 
   .flex {
