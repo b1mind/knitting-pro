@@ -5,20 +5,43 @@
   import Footer from '$lib/Footer.svelte'
 
   import '../lib/scss/global.scss'
+  $: isHome = $page.url.pathname === '/'
 </script>
 
-<Header />
+<div class="wrapper" class:isHome>
+  <Header />
 
-<main class="space">
-  <slot />
-</main>
+  <main class="space">
+    <slot />
+  </main>
 
-{#if $page.url.pathname !== '/'}
-  <Footer />
-{/if}
+  {#if !isHome}
+    <Footer />
+  {/if}
+</div>
 
 <style lang="scss">
   @use '../lib/scss/vars' as *;
+  .wrapper {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr minmax(240px, $mediaLrg) 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      '. head .'
+      '. courseNav .'
+      '. main .'
+      '. foot .';
+  }
+
+  .isHome {
+    grid-template-rows: 1fr auto auto 1fr;
+    grid-template-areas:
+      '. . .'
+      '. head .'
+      '. courseNav .'
+      '. . .';
+  }
 
   main {
     grid-area: main;
