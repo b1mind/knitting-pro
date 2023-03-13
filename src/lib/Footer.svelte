@@ -1,4 +1,5 @@
 <script>
+  import { assets, base } from '$app/paths'
   import SocialIcons from './SocialIcons.svelte'
   const icons = [
     {
@@ -23,9 +24,9 @@
 <footer class="container">
   <div>
     <div class="footer-nav flex wrap">
-      <a href="/">
+      <a href="{base}/">
         <img
-          src="/img/logo-large.svg"
+          src="{assets}/img/logo-large.svg"
           alt="KnittingPro Logo"
           width="114px"
           height="21px"

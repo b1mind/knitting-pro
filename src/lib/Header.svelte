@@ -3,10 +3,14 @@
   import { onMount } from 'svelte'
 
   import { cartStore } from '$lib/data/store'
+  import { assets, base } from '$app/paths'
+  const logoSmall = `${assets}/img/logo-small.svg`
+  const logoLarge = `${assets}/img/logo-large.svg`
+  const logoSearch = `${assets}/img/logo-search.svg`
 
   import Nav from '$lib/Nav.svelte'
 
-  $: isHome = $page.url.pathname === '/'
+  $: isHome = $page.url.pathname === base
   $: isCourse = $page.url.pathname.includes('course')
 
   let mediaSml = true
@@ -34,17 +38,17 @@
 <header class="container">
   <div class="nav-top flex" class:isCourse>
     <div class="logo">
-      <a href="/">
+      <a href={base}>
         {#if mediaSml}
           <img
-            src="/img/logo-small.svg"
+            src="{assets}/img/logo-small.svg"
             alt="KnittingPro Logo"
             width="45px"
             height="21px"
           />
         {:else}
           <img
-            src="/img/logo-large.svg"
+            src="{assets}/img/logo-large.svg"
             alt="KnittingPro Logo"
             width="114px"
             height="21px"
@@ -57,17 +61,22 @@
       <label for="search">
         <input disabled type="text" placeholder="What do you want to learn?" />
       </label>
-      <img src="/img/search.svg" alt="search icon" width="24px" height="24px" />
+      <img
+        src="{assets}/img/search.svg"
+        alt="search icon"
+        width="24px"
+        height="24px"
+      />
     </div>
 
     <nav class="nav-user">
       <!-- todo if signed in username -->
-      <a class="sign-in" href="/sign-in">Sign In</a>
+      <a class="sign-in" href="{base}/sign-in">Sign In</a>
       <!-- todo if signed in view courses -->
-      <a class="pill" href="/start">Get Started</a>
+      <a class="pill" href="{base}/start">Get Started</a>
 
       {#if isCourse}
-        <a class="cart" href="/cart">
+        <a class="cart" href="{base}/cart">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"

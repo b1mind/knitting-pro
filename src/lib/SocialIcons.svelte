@@ -1,8 +1,9 @@
 <script>
+  import { assets } from '$app/paths'
   export let name = 'twitter'
   export let url = 'twitter.com'
 
-  let icon = `/img/social-icons.svg#${name}`
+  let icon = `${assets}/img/social-icons.svg#${name}`
 </script>
 
 <a href="https://{url}">

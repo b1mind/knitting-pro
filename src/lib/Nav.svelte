@@ -1,5 +1,6 @@
 <script>
   import { page } from '$app/stores'
+  import { assets, base } from '$app/paths'
 </script>
 
 <div class="container">
@@ -7,19 +8,22 @@
     <nav class="flex">
       <ul class="nav-main">
         <li class:active={$page.url.pathname === '/courses'}>
-          <a sveltekit:prefetch href="/courses">All courses</a>
+          <a sveltekit:prefetch href="{base}/courses">All courses</a>
         </li>
         <li class:active={$page.params.slug === 'beginner'}>
-          <a sveltekit:prefetch href="/courses/beginner">Beginner</a>
+          <a sveltekit:prefetch href="{base}/courses/beginner">Beginner</a>
         </li>
         <li class:active={$page.params.slug === 'intermediate'}>
-          <a sveltekit:prefetch href="/courses/intermediate">Intermediate</a>
+          <a sveltekit:prefetch href="{base}/courses/intermediate"
+            >Intermediate</a
+          >
         </li>
         <li class:active={$page.params.slug === 'expert'}>
-          <a sveltekit:prefetch href="/courses/expert">Expert</a>
+          <a sveltekit:prefetch href="{base}/courses/expert">Expert</a>
         </li>
         <li class:active={$page.params.slug === 'grandmother'}>
-          <a sveltekit:prefetch href="/courses/grandmother">Grandmother</a>
+          <a sveltekit:prefetch href="{base}/courses/grandmother">Grandmother</a
+          >
         </li>
       </ul>
       <a href="#void">Subscribe</a>

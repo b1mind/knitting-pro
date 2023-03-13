@@ -1,4 +1,5 @@
 <script>
+  import { assets } from '$app/paths'
   export let alt = ''
   export let img = 'profile-pic'
 </script>
@@ -14,9 +15,14 @@
     </div>
     <div class="img">
       <picture>
-        <source srcset="/img/{img}.webp" type="image/webp" />
-        <source srcset="/img/{img}.png" type="image/png" />
-        <img src="/img/{img}.png" alt={img} width="325px" height="325px" />
+        <source srcset="{assets}/img/{img}.webp" type="image/webp" />
+        <source srcset="{assets}/img/{img}.png" type="image/png" />
+        <img
+          src="{assets}/img/{img}.png"
+          alt={img}
+          width="325px"
+          height="325px"
+        />
       </picture>
     </div>
   </div>
