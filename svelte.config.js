@@ -7,7 +7,7 @@ const config = {
   kit: {
     adapter: adapter(),
     // for static make all prerender
-    // prerender: { default: true },
+    prerender: { default: true },
   },
   preprocess: preprocess({}),
 }
