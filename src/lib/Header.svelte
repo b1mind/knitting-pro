@@ -31,7 +31,7 @@
   <title>KnittingPro {$page.params.slug || $page.url.pathname}</title>
 </svelte:head>
 
-<header class="container" class:isHome>
+<header class="container">
   <div class="nav-top flex" class:isCourse>
     <div class="logo">
       <a href="/">
@@ -111,7 +111,6 @@
     position: sticky;
     top: 0;
     min-width: 100%;
-    max-width: 75rem;
     background-color: var(--clr-neutral-100);
     z-index: 9999;
   }
@@ -152,14 +151,14 @@
     padding-bottom: 1em;
   }
 
-  .isHome {
-    // min-height: 100vh;
-    display: grid;
-    align-content: center;
-    @media (max-width: $mediaLrg) {
-      grid-template-rows: auto 1fr auto auto;
-    }
-  }
+  // .isHome {
+  //   // min-height: 100vh;
+  //   display: grid;
+  //   align-content: center;
+  //   @media (max-width: $mediaLrg) {
+  //     grid-template-rows: auto 1fr auto auto;
+  //   }
+  // }
 
   .isCourse {
     box-shadow: 0 10px 20px var(--clr-neutral-200);

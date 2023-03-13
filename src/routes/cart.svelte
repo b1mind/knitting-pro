@@ -9,12 +9,20 @@
     {$cartStore.length}
   </p>
 
-  <div class="grid">
+  <ul>
     {#each $cartStore as { ...course }}
-      <Card {...course} />
+      <li>
+        <Card {...course} list />
+      </li>
     {/each}
-  </div>
+  </ul>
 </div>
 
 <style lang="scss">
+  ul {
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+  }
 </style>

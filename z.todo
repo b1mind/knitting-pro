@@ -8,7 +8,7 @@ Todo:
   ☐ getting started + sign up (if logged in filter paid courses)
   ☐ sign in and auth
   ☐ demo user with auth / give cred at login 
-  ☐ button for enrolled courses goes to course if perchased and logged in
+  ☐ button for enrolled courses goes to course if purchased and logged in
   ☐ decide how/if cart clears or expires
   ✘ full screen grid wrapper (might need a refactor to hold design) @cancelled
   ✘ when logged out clears cart or saves local storage (as demo user per client) @cancelled

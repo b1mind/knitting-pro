@@ -10,6 +10,7 @@
   export let rating = ''
   export let sale = ''
   export let price = ''
+  export let list = false
 
   let stars = ~~rating
   let half = isInt(rating)
@@ -49,7 +50,7 @@
   })
 </script>
 
-<article class="card">
+<article class="card" class:list>
   <div class="flex">
     <div class="pill" data-level={level}>{level}</div>
 
@@ -109,6 +110,10 @@
       max-width: 350px;
       place-self: center;
     }
+  }
+
+  .list {
+    min-height: auto;
   }
 
   button.lrg {
