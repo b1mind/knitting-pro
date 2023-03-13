@@ -7,7 +7,7 @@
   <div class="scroll">
     <nav class="flex">
       <ul class="nav-main">
-        <li class:active={$page.url.pathname === '/courses'}>
+        <li class:active={$page.url.pathname === `${base}/courses`}>
           <a sveltekit:prefetch href="{base}/courses">All courses</a>
         </li>
         <li class:active={$page.params.slug === 'beginner'}>

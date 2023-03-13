@@ -4,9 +4,6 @@
 
   import { cartStore } from '$lib/data/store'
   import { assets, base } from '$app/paths'
-  const logoSmall = `${assets}/img/logo-small.svg`
-  const logoLarge = `${assets}/img/logo-large.svg`
-  const logoSearch = `${assets}/img/logo-search.svg`
 
   import Nav from '$lib/Nav.svelte'
 
@@ -212,7 +209,7 @@
   .img {
     height: 100%;
     min-height: 420px;
-    background: url('/img/yarn.png') no-repeat center;
+    background: url('/knitting-pro/img/yarn.png') no-repeat center;
     background-size: cover;
     border-radius: 2.25rem;
     box-shadow: var(--bs);
