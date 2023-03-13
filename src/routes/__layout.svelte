@@ -10,7 +10,8 @@
   import Footer from '$lib/Footer.svelte'
 
   import '../lib/scss/global.scss'
-  $: isHome = $page.url.pathname === base
+
+  $: isHome = $page.url.pathname === base || $page.url.pathname === base + '/'
 </script>
 
 <div class="wrapper" class:isHome>

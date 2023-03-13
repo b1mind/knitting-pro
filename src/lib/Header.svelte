@@ -7,7 +7,7 @@
 
   import Nav from '$lib/Nav.svelte'
 
-  $: isHome = $page.url.pathname === base + '/'
+  $: isHome = $page.url.pathname === base || $page.url.pathname === base + '/'
   $: isCourse = $page.url.pathname.includes('course')
 
   let mediaSml = true
