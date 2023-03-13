@@ -1,0 +1,1 @@
+import{w as a}from"./index-0c1df681.js";const n=function(t,e){const r=localStorage.getItem(t),o=r?JSON.parse(r):e,s=a(o,()=>s.subscribe(c=>{localStorage.setItem(t,JSON.stringify(c))}));return s},i=[];let l=n("cart",i);export{l as c};

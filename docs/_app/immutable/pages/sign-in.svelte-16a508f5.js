@@ -1,0 +1,1 @@
+import{S as o,i as r,s as i,t as l,h as c,g as u,E as n,d}from"../chunks/index-177a79a6.js";function p(s){let t;return{c(){t=l("There is no login yet")},l(e){t=c(e,"There is no login yet")},m(e,a){u(e,t,a)},p:n,i:n,o:n,d(e){e&&d(t)}}}const h=!0;class m extends o{constructor(t){super(),r(this,t,null,p,i,{})}}export{m as default,h as prerender};
